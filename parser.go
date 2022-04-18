@@ -65,8 +65,8 @@ func Parse(fName string) (MapObject, error) {
 		var nEntity NormalisedEntity
 		nEntity.Date = k.Properties.Title[0:10]
 		nEntity.Title = k.Properties.Title[11:]
-		nEntity.Latitude = k.Geometry.Coordinates[0]
-		nEntity.Longitude = k.Geometry.Coordinates[1]
+		nEntity.Longitude = k.Geometry.Coordinates[0]
+		nEntity.Latitude = k.Geometry.Coordinates[1]
 		nEntity.MediaURL = k.Properties.MediaURL
 
 		if char := k.Properties.Description[33]; '0' <= char && char <= '9' {
